@@ -1,4 +1,5 @@
-# README
+# rails-sample-app
+Sample app for chapter 3 of RailsTutorial.org book
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
