@@ -39,5 +39,5 @@
 yarn-debug.log*
 .yarn-integrity
 
-./vscode/
-./DS_Store
+.vscode/
+.DS_Store
