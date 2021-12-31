@@ -21,7 +21,7 @@ guard :minitest, spring: "bin/rails test", all_on_start: false do
   end
 
   watch('app/views/layouts/application.html.erb') do
-      'test/integration/site_layout_test.rb'
+    'test/integration/site_layout_test.rb'
   end
 
   watch('app/helpers/sessions_helper.rb') do
