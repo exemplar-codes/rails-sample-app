@@ -68,7 +68,12 @@ footer {
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
   color: #777;
+
+  position: fixed;
+  width: 75vw;
+  bottom: 0;
 }
+
 footer a {
   color: #555;
 }
