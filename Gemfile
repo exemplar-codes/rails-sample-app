@@ -33,9 +33,9 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'pry-byebug'
   gem 'sqlite3', '~> 1.4'
-
 end
 
 group :development do
@@ -43,21 +43,27 @@ group :development do
   gem 'web-console', '>= 4.1.0'
   # Display performance information such as SQL time and flame graphs for each request in your browser.
   # Can be configured to work on production as well see: https://github.com/MiniProfiler/rack-mini-profiler/blob/master/README.md
-  gem 'rack-mini-profiler', '~> 2.0'
   gem 'listen', '~> 3.3'
+  gem 'rack-mini-profiler', '~> 2.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  # Ruby formatter and linter
+  gem 'rubocop', '~> 1.28.2'
+  gem 'rubocop-performance', '~> 1.13.3'
+  gem 'rubocop-rails', '~> 2.14.2'
+  gem 'rubocop-rspec', '~> 2.10.0'
 end
 
 group :test do
   gem 'capybara',                 '3.35.3'
-  gem 'selenium-webdriver',       '3.142.7'
-  gem 'webdrivers',               '4.6.0'
-  gem 'rails-controller-testing', '1.0.5'
-  gem 'minitest',                 '5.11.3'
-  gem 'minitest-reporters',       '1.3.8'
   gem 'guard',                    '2.16.2'
   gem 'guard-minitest',           '2.4.6'
+  gem 'minitest',                 '5.11.3'
+  gem 'minitest-reporters',       '1.3.8'
+  gem 'rails-controller-testing', '1.0.5'
+  gem 'selenium-webdriver',       '3.142.7'
+  gem 'webdrivers',               '4.6.0'
 end
 
 group :production do
@@ -65,4 +71,4 @@ group :production do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
