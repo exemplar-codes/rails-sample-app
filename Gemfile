@@ -53,6 +53,8 @@ group :development do
   gem 'rubocop-performance', '~> 1.13.3'
   gem 'rubocop-rails', '~> 2.14.2'
   gem 'rubocop-rspec', '~> 2.10.0'
+
+  gem 'htmlbeautifier'
 end
 
 group :test do
